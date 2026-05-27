@@ -1,0 +1,371 @@
+/* Dashboard Styles */
+.dashboard {
+  background: #f5f7fa;
+  min-height: calc(100vh - 80px);
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2rem;
+}
+
+.dashboard-header p {
+  margin: 0.5rem 0 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.header-date {
+  color: #999;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+/* KPIs */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.kpi-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-left: 4px solid #667eea;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.kpi-card.kpi-ventas { border-left-color: #4caf50; }
+.kpi-card.kpi-pedidos { border-left-color: #2196f3; }
+.kpi-card.kpi-clientes { border-left-color: #ff9800; }
+.kpi-card.kpi-productos { border-left-color: #e91e63; }
+
+.kpi-icon {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-content h3 {
+  margin: 0 0 0.5rem;
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.kpi-value {
+  margin: 0 0 0.5rem;
+  color: #333;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.kpi-label {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #f5f7fa 0%, #fff 100%);
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.card-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+/* Estado de Pedidos */
+.estado-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.estado-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.estado-label {
+  min-width: 100px;
+  color: #666;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.estado-bar {
+  flex: 1;
+  height: 24px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.estado-fill {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 30px;
+  transition: width 0.3s ease;
+}
+
+.estado-fill.pending { background: #ff9800; }
+.estado-fill.confirmed { background: #2196f3; }
+.estado-fill.shipped { background: #9c27b0; }
+.estado-fill.delivered { background: #4caf50; }
+
+/* Tabla */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.mini-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.mini-table thead {
+  background: #f5f5f5;
+}
+
+.mini-table th {
+  padding: 0.75rem;
+  text-align: left;
+  color: #666;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.mini-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.mini-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.font-mono {
+  font-family: 'Courier New', monospace;
+  color: #e83e8c;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-pending { background: #fff3cd; color: #856404; }
+.badge-confirmado { background: #cfe2ff; color: #084298; }
+.badge-enviado { background: #e2e3e5; color: #383d41; }
+.badge-entregado { background: #d1e7dd; color: #0f5132; }
+.badge-cancelado { background: #f8d7da; color: #842029; }
+
+/* Acciones Rápidas */
+.quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.quick-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.action-icon {
+  font-size: 1.75rem;
+}
+
+.quick-action-btn.nuevo-pedido {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.quick-action-btn.nuevo-cliente {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.quick-action-btn.nuevo-producto {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.quick-action-btn.reportes {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.quick-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Alertas */
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.alert-icon {
+  font-size: 1.25rem;
+}
+
+.alert-warning {
+  background: #fff3cd;
+  color: #856404;
+  border-left: 4px solid #ffc107;
+}
+
+.alert-info {
+  background: #cfe2ff;
+  color: #084298;
+  border-left: 4px solid #0d6efd;
+}
+
+.alert-danger {
+  background: #f8d7da;
+  color: #842029;
+  border-left: 4px solid #dc3545;
+}
+
+.alert-success {
+  background: #d1e7dd;
+  color: #0f5132;
+  border-left: 4px solid #198754;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+
+  .kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-card {
+    flex-direction: row;
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+}

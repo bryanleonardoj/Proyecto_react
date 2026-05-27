@@ -4,12 +4,15 @@
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
-  --accent: #aa3bff;
+  --accent: #667eea;
+  --accent-secondary: #764ba2;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadow-lg:
+    rgba(0, 0, 0, 0.15) 0 25px 50px -12px;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -38,15 +41,141 @@
     --border: #2e303a;
     --code-bg: #1f2028;
     --accent: #c084fc;
+    --accent-secondary: #a78bfa;
     --accent-bg: rgba(192, 132, 252, 0.15);
     --accent-border: rgba(192, 132, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    --shadow-lg:
+      rgba(0, 0, 0, 0.5) 0 25px 50px -12px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: inherit;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--accent-secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+code {
+  background: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+  font-family: var(--mono);
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--code-bg);
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  button {
+    padding: 0.5em 1em;
   }
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
   }
 }
 
